@@ -1,0 +1,31 @@
+<section class="levar-receber__container">
+    <form  [formGroup]="formLevarReceber" (ngSubmit)="enviarLevarReceber()">
+        <div class="form__content">
+            <div class="form-group__datas" [formGroup]="datasFormGroup" >
+                <div class="form-group">
+                    <label for="dataInicial">Data Inicial</label>
+                    <input type="date" formControlName="dataInicial" class="form-control" id="dataInicial">
+                </div>
+                <span class="levar-receber_span" > a </span>
+                <div class="form-group">
+                    <label for="dataFinal">Data Final</label>
+                    <input type="date" formControlName="dataFinal" [value]="receberDataAtual()" class="form-control" id="dataFinal">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="situacao">Situação:</label>
+            <select  id="situacao" formControlName="situacao" >
+                @for (s of situacoes; track $index) {
+                    <option [value]="s.id">{{s.value}}</option>
+                }
+            </select>
+        </div>
+        <button type="submit" > Enviar </button>
+    </form>
+</section>
+
+@if(levarReceberLista.length > 0) {
+    <app-levar-receber-cards [inputlevarReceber]="levarReceberLista" [datas]="datas" />
+}

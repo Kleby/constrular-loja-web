@@ -1,0 +1,44 @@
+@if(datas.dataInicial){
+    <div class="modal__container">
+        <!-- <div class="btn-fechar-modal">
+            <button (click)="fecharModalEmit()">X</button>
+        </div> -->
+        <h2>
+            Lista de Clientes em Levar e Receber de <span class="dataDestaque" >{{datas.dataInicial }}</span> a <span class="dataDestaque" >{{datas.dataFinal}}</span>
+        </h2>
+        @if(listaLevarReceber.length > 0){
+
+            <div class="levar-receber__content">
+                <table class="table__container" border="1" >
+                    <thead >
+                        <tr>
+                            <th>Cod. Venda</th>
+                            <th>Vendedor</th>
+                            <th>Processada por</th>
+                            <th>Cod. Cliente</th>
+                            <th>Situação</th>
+                            <th>Observação</th>
+                            <th>Emissão</th>
+                            <th>Subtotal</th>
+                            <th>Desconto</th>
+                            <th>Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (levarReceber of listaLevarReceber; track $index) {
+                            <tr class="card__contoiner">
+                                <app-card [inputCardContent]="levarReceber" />
+                            </tr>
+                        }             
+                    </tbody>
+            </table>
+        </div>
+    }
+    @else {
+        <h3>Nenhum registro encontrado.</h3>
+    }
+        
+    </div>
+}
+

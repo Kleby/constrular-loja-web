@@ -1,0 +1,11 @@
+.modal__container{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px 1px #000,
+         inset -4px -4px 10px 1px #fff;
+    background-color: #f6f6f6;
+    padding: 1rem .75rem ;
+}
