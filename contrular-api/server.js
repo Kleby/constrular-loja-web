@@ -17,6 +17,11 @@ app.use('/api/v1/docs', routerDocs);
 app.use('/api/v1/vendas', routerVendas);
 
 
+// require('dotenv').config({ path: `./environment/${process.env.NODE_ENV}.env` });
+
+console.log(`Ambiente carregado: ${process.env.NODE_ENV}`);
+
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
