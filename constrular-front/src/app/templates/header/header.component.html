@@ -1,8 +1,27 @@
-<header>
-    <nav>
-        <ul>
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/levar-receber">Levar e receber</a></li>
+<header class="header__container">
+    <nav class="header__nav">
+        <ul class="nav-router">
+            <li class="router-item">
+                <a 
+                    routerLink="/home" 
+                    [routerLinkActiveOptions]="{exact: true}"
+                    routerLinkActive="active-link" 
+                    router class="router-link">
+                        Inicial
+                    <span class="line__link-active"></span>
+                </a>
+            </li>
+            <li class="router-item">
+                <a 
+                routerLink="/levar-receber" 
+                class="router-link"
+                routerLinkActive="active-link" 
+                >
+                Levar e receber
+                <span class="line__link-active"></span>
+                </a>
+            </li>
         </ul>
     </nav>
+    <span class="line-h" ></span>
 </header>

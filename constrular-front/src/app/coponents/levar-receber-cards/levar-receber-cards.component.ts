@@ -34,6 +34,7 @@ export class LevarReceberCardsComponent implements OnInit, OnChanges {
       VEN_SITUACAO: this.AdicionarNomeEmSituacao(lr.VEN_SITUACAO)
     }));  
     this.datas.dataInicial = this.datas.dataInicial.replace(/(\d{4})-(\d{2})-(\d{2})/ , "$3/$2/$1")
+    this.datas.dataFinal = this.datas.dataFinal.replace(/(\d{4})-(\d{2})-(\d{2})/ , "$3/$2/$1")
     
   }
 

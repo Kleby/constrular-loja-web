@@ -1,0 +1,27 @@
+
+.card-item__container{
+    width: 100%;
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    display: grid;
+    /* gap: .25rem; */
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
+}
+
+.card-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+}
+.card-item:nth-child(3n + 1){
+    background-color: #555;
+}
+
+.card-item:nth-child(3n + 3){
+    background-color: #777;
+}

@@ -3,36 +3,66 @@
         <!-- <div class="btn-fechar-modal">
             <button (click)="fecharModalEmit()">X</button>
         </div> -->
-        <h2>
-            Lista de Clientes em Levar e Receber de <span class="dataDestaque" >{{datas.dataInicial }}</span> a <span class="dataDestaque" >{{datas.dataFinal}}</span>
+        <h2 class="cards__title">
+            Lista de Clientes em Levar e Receber de <span class="date-heilight" >{{datas.dataInicial }}</span> a <span class="date-heilight" >{{datas.dataFinal}}</span>
         </h2>
         @if(listaLevarReceber.length > 0){
 
             <div class="levar-receber__content">
-                <table class="table__container" border="1" >
-                    <thead >
-                        <tr>
-                            <th>Cod. Venda</th>
-                            <th>Vendedor</th>
-                            <th>Processada por</th>
-                            <th>Cod. Cliente</th>
-                            <th>Situação</th>
-                            <th>Observação</th>
-                            <th>Emissão</th>
-                            <th>Subtotal</th>
-                            <th>Desconto</th>
-                            <th>Total</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div class="card-grid__container">
+                        <div class="card-grid__header" >
+                            <div class="card-grid__header-content">
+                                <p class="card-grid__header-item" >Cod. Venda 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Vendedor 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Processada 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Cod. Cliente 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Situação 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Observação 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Emissão 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Subtotal 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Desconto 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                                <p class="card-grid__header-item" >Total 
+                                    <span class="line-h"></span> 
+                                    <span class="line-v"></span>
+                                </p>
+                            </div>
+                            <!-- <span class="line-h"></span> -->
+                        </div>
+                    <div class="card-grid__body" >
                         @for (levarReceber of listaLevarReceber; track $index) {
-                            <tr class="card__contoiner">
+                            <div class="card-grid__items">
                                 <app-card [inputCardContent]="levarReceber" />
-                            </tr>
-                        }             
-                    </tbody>
-            </table>
+                            </div>
+                            }             
+                    </div>
+            </div>
         </div>
     }
     @else {
